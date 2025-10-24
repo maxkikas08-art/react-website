@@ -1,0 +1,88 @@
+.character-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.character-info.fade-out {
+  opacity: 0;
+}
+
+.character-info.fade-in {
+  opacity: 1;
+}
+
+.character-image {
+  width: 350px; /* default normal size */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.character-image.small {
+  width: 325px; /* smaller for Bachira, Nagi, Chigiri, Kurona */
+}
+
+.character-image.bachira-small {
+  width: 240px; /* Bachira 50px smaller */
+}
+
+.character-image:hover {
+  transform: scale(1.02);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/* Closer to center horizontally */
+.arrow.left {
+  left: 16%; 
+}
+
+.arrow.right {
+  right: 16%;
+}
+
+/* Keep arrows vertically centered on smaller screens */
+@media screen and (max-width: 768px) {
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 0.6rem 0.9rem;
+  }
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+/* ✅ Character bio box styling */
+.character-text {
+  background-color: #e0e0e0; /* light gray for normal mode */
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  max-width: 320px;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styling for bio box */
+body.dark-mode .character-text {
+  background-color: #5c9eff; /* matches requested dark mode color */
+  color: #fff; /* ensures text readability */
+}

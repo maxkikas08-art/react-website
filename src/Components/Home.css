@@ -1,0 +1,51 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  margin-top: -400px; /* spacing below navbar */
+  /* Removed invalid negative padding-left */
+  padding-left: 0;
+  padding-right: 5%;
+  gap: 40px; /* space between image and text */
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+.hero-image {
+  width: 50%; /* half of the container */
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.hero-text {
+  width: 45%; /* text area */
+  color: #222222;
+  font-family: "Arial", sans-serif;
+  text-align: left;
+}
+
+.hero-text h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.hero-text p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  margin-top: -400px;
+  padding-left: 0;
+  padding-right: 5%;
+  gap: 40px;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+
+

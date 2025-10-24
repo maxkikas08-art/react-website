@@ -1,0 +1,181 @@
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* spacing between button, search, and logo */
+  flex: 1; /* allow this container to grow */
+  flex-wrap: wrap;
+}
+
+/* Rounded search bar */
+.navbar-search {
+  flex: 1 1 auto; /* search bar stretches to fill available space */
+  min-width: 150px;
+  max-width: 550px;
+}
+
+.navbar-search input {
+  width: 85%;
+  padding: 0.45rem 0.9rem;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.navbar-search input:focus {
+  box-shadow: 0 0 6px #5c9eff;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-left {
+    flex-direction: column;
+    align-items: stretch; /* make all items full width */
+    gap: 0.75rem;
+  }
+
+  .navbar-search input {
+    width: 100%; /* full width on small screens */
+  }
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between Home and button */
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-links li a:hover {
+  color: #5c9eff;
+  transform: scale(1.05);
+}
+
+/* Dark mode toggle button */
+.bl_pent_btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.bl_pent_btn img {
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.bl_pent_btn:hover img {
+  transform: scale(115%);
+}
+
+/* Dark mode navbar styles */
+.navbar.navbar-dark {
+  background-color: #5c9eff;
+  color: white;
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+/* Change navbar links color in dark mode */
+.navbar.navbar-dark .navbar-links li a {
+  color: white;
+}
+
+/* Dark mode body background */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Small screen adjustments */
+@media screen and (max-width: 480px) {
+  .navbar-links li a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Hero text styles */
+body.dark-mode .hero-text {
+  color: white;
+}
+
+body.dark-mode .hero-text h2,
+body.dark-mode .hero-text p {
+  color: white;
+}
+
+.hero-text {
+  transition: color 0.3s ease;
+}
+
+.bl_pent_btn:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* space between 'Home' and the button */
+}
